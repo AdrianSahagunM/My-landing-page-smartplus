@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Espacio Smart Plus - [Tu Nombre]</title>
+    <title>Mi Espacio Smart Plus - Elegancia & Innovación</title>
     <!-- Incluye Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Configuración personalizada de Tailwind para colores y fuentes -->
@@ -14,186 +14,621 @@
                     fontFamily: {
                         'playfair': ['"Playfair Display"', 'serif'],
                         'lato': ['Lato', 'sans-serif'],
+                        'didot': ['"Didot"', '"Playfair Display"', 'serif'],
                     },
                     colors: {
-                        'elegant-dark': '#2C3E50',       /* Carbón oscuro, para textos principales */
-                        'elegant-light': '#F8F8F8',      /* Blanco roto, fondo principal */
-                        'elegant-gold': '#D4AF37',       /* Toque sutil de oro */
-                        'elegant-gray': '#AAAAAA',       /* Gris claro para detalles */
-                        'elegant-text': '#4A4A4A',       /* Gris oscuro para cuerpo de texto */
-                        'elegant-border': '#E0E0E0',     /* Gris muy claro para bordes */
+                        'vogue-black': '#1A1A1A',        /* Negro profundo VOGUE */
+                        'vogue-white': '#FEFEFE',        /* Blanco puro editorial */
+                        'vogue-cream': '#F9F7F4',        /* Crema sofisticado */
+                        'vogue-gold': '#C9A96E',         /* Oro editorial refinado */
+                        'vogue-gray': '#8B8B8B',         /* Gris medio elegante */
+                        'vogue-light-gray': '#E8E6E3',   /* Gris claro sutil */
+                        'vogue-charcoal': '#2D2D2D',     /* Carbón editorial */
+                        'vogue-accent': '#B8860B',       /* Acento dorado oscuro */
+                    },
+                    spacing: {
+                        '18': '4.5rem',
+                        '22': '5.5rem',
+                        '26': '6.5rem',
+                        '30': '7.5rem',
+                        '34': '8.5rem',
+                        '38': '9.5rem',
+                    },
+                    letterSpacing: {
+                        'ultra-wide': '0.15em',
+                        'editorial': '0.05em',
                     }
                 }
             }
         }
     </script>
     <!-- Google Fonts: Playfair Display para títulos, Lato para cuerpo -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700;800&family=Lato:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Lato', sans-serif;
-            background-color: theme('colors.elegant-light'); /* Fondo principal blanco roto */
-            color: theme('colors.elegant-text'); /* Color de texto general */
-            line-height: 1.6;
+            background-color: #F9F7F4;
+            color: #2D2D2D;
+            line-height: 1.75;
+            letter-spacing: 0.01em;
+        }
+        
+        .vogue-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+        }
+        
+        .vogue-subtitle {
+            font-family: 'Lato', sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        .vogue-body {
+            font-family: 'Lato', sans-serif;
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: 0.01em;
+        }
+        
+        .vogue-card {
+            background: linear-gradient(135deg, #FEFEFE 0%, #F9F7F4 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(200, 200, 200, 0.2);
+        }
+        
+        .vogue-shadow {
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+        
+        .vogue-hover {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .vogue-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+        
+        .vogue-divider {
+            background: linear-gradient(90deg, transparent 0%, #C9A96E 50%, transparent 100%);
+            height: 1px;
+        }
+        
+        .editorial-spacing {
+            margin-bottom: 3.5rem;
+        }
+        
+        @media (min-width: 768px) {
+            .editorial-spacing {
+                margin-bottom: 5rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .editorial-spacing {
+                margin-bottom: 6.5rem;
+            }
         }
     </style>
 </head>
 <body class="antialiased">
-    <!-- Encabezado / Hero Section -->
-    <header class="bg-white text-elegant-dark py-20 px-4 md:px-8 lg:px-16 shadow-sm border-b border-elegant-border">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-            <div class="text-center md:text-left mb-10 md:mb-0">
-                <h1 class="font-playfair text-4xl md:text-5xl lg:text-6xl font-normal mb-4 leading-tight">
-                    <span class="block text-elegant-dark">Bienvenido a</span>
-                    <span class="block text-elegant-gold">Tu Ejecutivo Smart Plus</span>
-                </h1>
-                <p class="font-lato text-lg md:text-xl max-w-2xl text-elegant-text mt-4">
-                    Como ejecutivo Smart de **Smart Plus**, te doy la bienvenida a un espacio exclusivo donde la innovación se encuentra con la distinción. Mantente informado con nuestras noticias, dinámicas, ofertas y eventos más relevantes.
-                </p>
-                <div class="mt-10">
-                    <a href="#noticias" class="inline-block bg-elegant-dark text-white font-lato py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:bg-elegant-gold hover:text-elegant-dark">
-                        Explorar Contenido
-                    </a>
+    
+    <!-- Hero Section Editorial -->
+    <header class="relative bg-vogue-white min-h-screen flex items-center">
+        <div class="absolute inset-0 bg-gradient-to-br from-vogue-cream via-vogue-white to-vogue-light-gray opacity-60"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center min-h-[80vh]">
+                
+                <!-- Contenido Principal -->
+                <div class="lg:col-span-7 space-y-12">
+                    <!-- Subtítulo Editorial -->
+                    <div class="space-y-4">
+                        <p class="vogue-subtitle text-vogue-gray text-sm tracking-ultra-wide">
+                            SMART PLUS EXECUTIVE EXPERIENCE
+                        </p>
+                        <div class="vogue-divider w-24"></div>
+                    </div>
+                    
+                    <!-- Título Principal -->
+                    <h1 class="vogue-title text-vogue-black">
+                        <span class="block text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-4">
+                            Bienvenido a
+                        </span>
+                        <span class="block text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-vogue-gold font-light italic">
+                            Tu Espacio Exclusivo
+                        </span>
+                    </h1>
+                    
+                    <!-- Descripción Editorial -->
+                    <div class="space-y-8 max-w-2xl">
+                        <p class="vogue-body text-xl md:text-2xl text-vogue-charcoal leading-relaxed">
+                            Como ejecutivo Smart de <em class="text-vogue-gold font-medium">Smart Plus</em>, 
+                            te damos la bienvenida a un universo donde la innovación se encuentra 
+                            con la distinción más refinada.
+                        </p>
+                        
+                        <p class="vogue-body text-lg text-vogue-gray">
+                            Mantente informado con nuestras noticias exclusivas, dinámicas innovadoras, 
+                            ofertas preferenciales y eventos de alto nivel que definen el futuro 
+                            de la tecnología empresarial.
+                        </p>
+                    </div>
+                    
+                    <!-- Call to Action Editorial -->
+                    <div class="pt-8">
+                        <a href="#contenido" 
+                           class="inline-flex items-center group bg-vogue-black text-vogue-white px-12 py-4 
+                                  text-sm tracking-wide uppercase font-medium vogue-hover
+                                  border border-vogue-black hover:bg-transparent hover:text-vogue-black">
+                            <span>Explorar Contenido</span>
+                            <svg class="ml-3 w-4 h-4 transform group-hover:translate-x-1 transition-transform" 
+                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                                      d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Espacio para tu imagen o un logo elegante -->
-            <div class="flex-shrink-0">
-                <img src="https://placehold.co/280x280/F8F8F8/2C3E50?text=Tu+Foto" alt="Foto de Perfil" class="rounded-full w-56 h-56 object-cover border border-elegant-gray shadow-md">
+                
+                <!-- Imagen Editorial -->
+                <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-vogue-gold opacity-10 rounded-full transform rotate-6"></div>
+                        <img src="https://placehold.co/400x400/F9F7F4/2D2D2D?text=Executive+Portrait" 
+                             alt="Executive Portrait" 
+                             class="relative z-10 w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full 
+                                    border-4 border-vogue-white vogue-shadow">
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Contenido Principal -->
-    <main class="max-w-7xl mx-auto py-16 px-4 md:px-8 lg:px-16">
-
+    <main id="contenido" class="bg-vogue-cream">
+        
         <!-- Sección de Noticias -->
-        <section id="noticias" class="mb-20">
-            <div class="flex items-center mb-8 border-b pb-4 border-elegant-border">
-                <!-- Icono de Noticias (SVG inline) -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9 text-elegant-gold mr-4">
-                    <path fill-rule="evenodd" d="M11.828 2.25c-.965-.213-1.956-.341-2.95-.383v2.836A49.358 49.358 0 0112 4.5c.345 0 .687.009 1.026.026v-2.7C12.637 1.87 12.22 2.053 11.828 2.25zm-.362 1.304a50.315 50.315 0 013.044 0v4.829a8.9 8.9 0 00-3.044-.225V3.554zM2.25 12c0-.853.078-1.685.22-2.485h2.813a49.324 49.324 0 010 4.97h-2.813A51.373 51.373 0 012.25 12zm9.188 8.016v-4.662c.983.178 1.995.267 3.012.267.363 0 .724-.007 1.083-.02v4.717a50.36 50.36 0 01-4.095-.302zM12 19.5c-.345 0-.687-.009-1.026-.026v2.7c.408.197.825.38 1.217.569a49.358 49.358 0 002.95-.383v-2.836a49.359 49.359 0 01-3.141.206zM21.78 12c0 .853-.078 1.685-.22 2.485h-2.813a49.324 49.324 0 010-4.97h2.813c.142.8.22 1.632.22 2.485zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z" clip-rule="evenodd" />
-                </svg>
-                <h2 class="font-playfair text-4xl font-normal text-elegant-dark">Noticias Importantes</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Noticia 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-elegant-border hover:shadow-lg transition duration-300">
-                    <h3 class="font-playfair text-2xl font-normal text-elegant-dark mb-3">Lanzamiento de la Nueva Plataforma "Smart Connect"</h3>
-                    <p class="font-lato text-sm text-elegant-gray mb-4">10 de Junio, 2025</p>
-                    <p class="font-lato text-elegant-text">Descubre "Smart Connect", nuestra innovadora plataforma diseñada para optimizar la colaboración y la eficiencia entre nuestros socios. ¡Funcionalidades avanzadas a tu alcance!</p>
+        <section class="editorial-spacing pt-26">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+                
+                <!-- Header de Sección -->
+                <div class="text-center mb-20">
+                    <p class="vogue-subtitle text-vogue-gray text-sm tracking-ultra-wide mb-6">
+                        ACTUALIDAD SMART PLUS
+                    </p>
+                    <h2 class="vogue-title text-4xl md:text-5xl lg:text-6xl text-vogue-black mb-8">
+                        Noticias Importantes
+                    </h2>
+                    <div class="vogue-divider w-32 mx-auto"></div>
                 </div>
-                <!-- Noticia 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-elegant-border hover:shadow-lg transition duration-300">
-                    <h3 class="font-playfair text-2xl font-normal text-elegant-dark mb-3">Informe Anual de Tendencias Tecnológicas 2025</h3>
-                    <p class="font-lato text-sm text-elegant-gray mb-4">01 de Junio, 2025</p>
-                    <p class="font-lato text-elegant-text">Accede a nuestro análisis exhaustivo sobre las tendencias que definen el futuro de la tecnología. Un recurso clave para tu estrategia empresarial.</p>
-                </div>
-                <!-- Noticia 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-elegant-border hover:shadow-lg transition duration-300">
-                    <h3 class="font-playfair text-2xl font-normal text-elegant-dark mb-3">Expansión de Smart Plus en el Mercado Europeo</h3>
-                    <p class="font-lato text-sm text-elegant-gray mb-4">25 de Mayo, 2025</p>
-                    <p class="font-lato text-elegant-text">Nos expandimos en Europa, abriendo nuevas fronteras y fortaleciendo nuestra presencia global. Conoce el impacto de esta importante fase.</p>
+                
+                <!-- Grid de Noticias -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+                    
+                    <!-- Noticia 1 -->
+                    <article class="vogue-card vogue-shadow vogue-hover rounded-none p-10 group">
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-2 h-2 bg-vogue-gold rounded-full"></div>
+                                <time class="vogue-subtitle text-xs text-vogue-gray tracking-wide">
+                                    10 DE JUNIO, 2025
+                                </time>
+                            </div>
+                            
+                            <h3 class="vogue-title text-2xl lg:text-3xl text-vogue-black leading-tight 
+                                       group-hover:text-vogue-gold transition-colors duration-300">
+                                Lanzamiento de la Nueva Plataforma "Smart Connect"
+                            </h3>
+                            
+                            <p class="vogue-body text-vogue-charcoal leading-relaxed">
+                                Descubre "Smart Connect", nuestra innovadora plataforma diseñada para 
+                                optimizar la colaboración y la eficiencia entre nuestros socios. 
+                                Funcionalidades avanzadas que redefinen la experiencia empresarial.
+                            </p>
+                            
+                            <div class="pt-4">
+                                <a href="#" class="text-vogue-gold text-sm tracking-wide uppercase 
+                                                  hover:text-vogue-accent transition-colors">
+                                    Leer Más →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Noticia 2 -->
+                    <article class="vogue-card vogue-shadow vogue-hover rounded-none p-10 group">
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-2 h-2 bg-vogue-gold rounded-full"></div>
+                                <time class="vogue-subtitle text-xs text-vogue-gray tracking-wide">
+                                    01 DE JUNIO, 2025
+                                </time>
+                            </div>
+                            
+                            <h3 class="vogue-title text-2xl lg:text-3xl text-vogue-black leading-tight 
+                                       group-hover:text-vogue-gold transition-colors duration-300">
+                                Informe Anual de Tendencias Tecnológicas 2025
+                            </h3>
+                            
+                            <p class="vogue-body text-vogue-charcoal leading-relaxed">
+                                Accede a nuestro análisis exhaustivo sobre las tendencias que definen 
+                                el futuro de la tecnología. Un recurso estratégico fundamental para 
+                                tu visión empresarial.
+                            </p>
+                            
+                            <div class="pt-4">
+                                <a href="#" class="text-vogue-gold text-sm tracking-wide uppercase 
+                                                  hover:text-vogue-accent transition-colors">
+                                    Leer Más →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Noticia 3 -->
+                    <article class="vogue-card vogue-shadow vogue-hover rounded-none p-10 group">
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-2 h-2 bg-vogue-gold rounded-full"></div>
+                                <time class="vogue-subtitle text-xs text-vogue-gray tracking-wide">
+                                    25 DE MAYO, 2025
+                                </time>
+                            </div>
+                            
+                            <h3 class="vogue-title text-2xl lg:text-3xl text-vogue-black leading-tight 
+                                       group-hover:text-vogue-gold transition-colors duration-300">
+                                Expansión de Smart Plus en el Mercado Europeo
+                            </h3>
+                            
+                            <p class="vogue-body text-vogue-charcoal leading-relaxed">
+                                Nos expandimos en Europa, abriendo nuevas fronteras y fortaleciendo 
+                                nuestra presencia global. Conoce el impacto transformador de esta 
+                                importante fase de crecimiento.
+                            </p>
+                            
+                            <div class="pt-4">
+                                <a href="#" class="text-vogue-gold text-sm tracking-wide uppercase 
+                                                  hover:text-vogue-accent transition-colors">
+                                    Leer Más →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Sección de Juegos y Dinámicas -->
-        <section id="juegos-dinamicas" class="mb-20">
-            <div class="flex items-center mb-8 border-b pb-4 border-elegant-border">
-                <!-- Icono de Juegos (SVG inline) -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9 text-elegant-gold mr-4">
-                    <path fill-rule="evenodd" d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 010 1.5H7.5v1.5A.75.75 0 016 9V6.75a.75.75 0 01.75-.75zm.75 12a.75.75 0 01-.75.75H6a.75.75 0 010-1.5h1.5V15a.75.75 0 011.5 0v1.5a.75.75 0 01-.75.75zm8.25-6a.75.75 0 01.75-.75H18a.75.75 0 010 1.5h-1.5v1.5a.75.75 0 01-1.5 0V12.75a.75.75 0 01.75-.75zm.75 6a.75.75 0 01-.75.75H15a.75.75 0 010-1.5h1.5V15a.75.75 0 011.5 0v1.5a.75.75 0 01-.75.75z" clip-rule="evenodd" />
-                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12 3.75a8.25 8.25 0 100 16.5 8.25 8.25 0 000-16.5z" clip-rule="evenodd" />
-                </svg>
-                <h2 class="font-playfair text-4xl font-normal text-elegant-dark">Juegos y Dinámicas</h2>
-            </div>
-            <div class="bg-white p-10 rounded-xl shadow-md border border-elegant-border text-elegant-text">
-                <p class="font-lato text-lg mb-4">
-                    Estamos preparando una sección exclusiva con juegos y dinámicas interactivas. Diseñadas para fomentar la creatividad, el ingenio y el trabajo en equipo, estas actividades estarán disponibles muy pronto.
-                </p>
-                <p class="font-lato text-sm text-elegant-gray">
-                    Mantente al tanto para las próximas novedades. ¡La diversión y el aprendizaje se unen en Smart Plus!
-                </p>
+        <section class="editorial-spacing">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+                
+                <!-- Header de Sección -->
+                <div class="text-center mb-20">
+                    <p class="vogue-subtitle text-vogue-gray text-sm tracking-ultra-wide mb-6">
+                        EXPERIENCIAS INTERACTIVAS
+                    </p>
+                    <h2 class="vogue-title text-4xl md:text-5xl lg:text-6xl text-vogue-black mb-8">
+                        Juegos y Dinámicas
+                    </h2>
+                    <div class="vogue-divider w-32 mx-auto"></div>
+                </div>
+                
+                <!-- Contenido Coming Soon -->
+                <div class="max-w-4xl mx-auto">
+                    <div class="vogue-card vogue-shadow rounded-none p-16 text-center">
+                        <div class="space-y-8">
+                            <div class="w-16 h-16 bg-vogue-gold bg-opacity-20 rounded-full 
+                                        flex items-center justify-center mx-auto">
+                                <svg class="w-8 h-8 text-vogue-gold" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            
+                            <h3 class="vogue-title text-3xl lg:text-4xl text-vogue-black">
+                                Próximamente Disponible
+                            </h3>
+                            
+                            <div class="space-y-6 max-w-2xl mx-auto">
+                                <p class="vogue-body text-xl text-vogue-charcoal leading-relaxed">
+                                    Estamos desarrollando una sección exclusiva con juegos y dinámicas 
+                                    interactivas de vanguardia.
+                                </p>
+                                
+                                <p class="vogue-body text-lg text-vogue-gray">
+                                    Diseñadas para fomentar la creatividad, el ingenio y el trabajo 
+                                    colaborativo, estas experiencias estarán disponibles muy pronto 
+                                    para enriquecer tu journey Smart Plus.
+                                </p>
+                            </div>
+                            
+                            <div class="pt-6">
+                                <p class="vogue-subtitle text-sm text-vogue-gold tracking-wide">
+                                    LA INNOVACIÓN Y EL APRENDIZAJE SE UNEN EN SMART PLUS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Sección de Ofertas -->
-        <section id="ofertas" class="mb-20">
-            <div class="flex items-center mb-8 border-b pb-4 border-elegant-border">
-                <!-- Icono de Ofertas (SVG inline) -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9 text-elegant-gold mr-4">
-                    <path d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" />
-                    <path fill-rule="evenodd" d="M11.25 5.25A.75.75 0 0112 4.5h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75H21a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75H24v-6A9 9 0 0015 0h-3a9 9 0 00-9 9v6h3a.75.75 0 00.75-.75V8.25a.75.75 0 00-.75-.75h-.75a.75.75 0 01-.75-.75V6.75a.75.75 0 00-.75-.75H3a.75.75 0 01-.75-.75V5.25A.75.75 0 002.25 4.5H3A.75.75 0 013.75 3.75v-.75A.75.75 0 004.5 2.25h.75a.75.75 0 01.75-.75h.75A.75.75 0 006.75.75v.75A.75.75 0 017.5 2.25h.75A.75.75 0 009 3.75h.75A.75.75 0 0110.5 4.5v.75zM12 21a9 9 0 009-9V9a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75v3a.75.75 0 01-.75.75h-.75a.75.75 0 00-.75.75v.75a.75.75 0 01-.75.75h-.75a.75.75 0 00-.75.75v.75a.75.75 0 01-.75.75H9.75a.75.75 0 00-.75.75v.75a.75.75 0 01-.75.75H7.5a.75.75 0 00-.75.75v.75A.75.75 0 016 19.5v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75A.75.75 0 009 22.5h3zm0-18a7.5 7.5 0 00-7.5 7.5v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75V12a7.5 7.5 0 00-7.5-7.5zM12 3a7.5 7.5 0 00-7.5 7.5V12a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75v.75a.75.75 0 00.75.75h.75a.75.75 0 01.75.75V19.5A7.5 7.5 0 0012 12V3z" clip-rule="evenodd" />
-                </svg>
-                <h2 class="font-playfair text-4xl font-normal text-elegant-dark">Ofertas Exclusivas</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <!-- Oferta 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-elegant-border hover:shadow-lg transition duration-300">
-                    <h3 class="font-playfair text-2xl font-normal text-elegant-dark mb-3">Descuento del 15% en Soluciones IoT</h3>
-                    <p class="font-lato text-sm text-elegant-gray mb-4">Válido hasta el 30 de Junio</p>
-                    <p class="font-lato text-elegant-text">Accede a una oportunidad única para integrar nuestras soluciones de Internet de las Cosas a un precio preferencial exclusivo para socios.</p>
+        <section class="editorial-spacing">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+                
+                <!-- Header de Sección -->
+                <div class="text-center mb-20">
+                    <p class="vogue-subtitle text-vogue-gray text-sm tracking-ultra-wide mb-6">
+                        BENEFICIOS EXCLUSIVOS
+                    </p>
+                    <h2 class="vogue-title text-4xl md:text-5xl lg:text-6xl text-vogue-black mb-8">
+                        Ofertas Preferenciales
+                    </h2>
+                    <div class="vogue-divider w-32 mx-auto"></div>
                 </div>
-                <!-- Oferta 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-elegant-border hover:shadow-lg transition duration-300">
-                    <h3 class="font-playfair text-2xl font-normal text-elegant-dark mb-3">Acceso Gratuito a Webinars Premium</h3>
-                    <p class="font-lato text-sm text-elegant-gray mb-4">Solo para Socios Smart</p>
-                    <p class="font-lato text-elegant-text">Te invitamos a nuestra serie de webinars avanzados sobre IA y Big Data. Un contenido de alto valor sin costo adicional.</p>
-                </div>
-                <!-- Oferta 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-elegant-border hover:shadow-lg transition duration-300">
-                    <h3 class="font-playfair text-2xl font-normal text-elegant-dark mb-3">Consulta Estratégica Personalizada</h3>
-                    <p class="font-lato text-sm text-elegant-gray mb-4">Cupos limitados</p>
-                    <p class="font-lato text-elegant-text">Agenda una sesión de consultoría estratégica gratuita con nuestros expertos para impulsar tu negocio.</p>
+                
+                <!-- Grid de Ofertas -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+                    
+                    <!-- Oferta 1 -->
+                    <article class="vogue-card vogue-shadow vogue-hover rounded-none p-10 group">
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-2 h-2 bg-vogue-gold rounded-full"></div>
+                                    <span class="vogue-subtitle text-xs text-vogue-gray tracking-wide">
+                                        VÁLIDO HASTA 30 JUNIO
+                                    </span>
+                                </div>
+                                <div class="bg-vogue-gold text-vogue-white px-3 py-1 text-xs font-bold">
+                                    15% OFF
+                                </div>
+                            </div>
+                            
+                            <h3 class="vogue-title text-2xl lg:text-3xl text-vogue-black leading-tight 
+                                       group-hover:text-vogue-gold transition-colors duration-300">
+                                Soluciones IoT Avanzadas
+                            </h3>
+                            
+                            <p class="vogue-body text-vogue-charcoal leading-relaxed">
+                                Accede a una oportunidad única para integrar nuestras soluciones 
+                                de Internet de las Cosas a un precio preferencial exclusivo 
+                                para socios Smart Plus.
+                            </p>
+                            
+                            <div class="pt-4">
+                                <a href="#" class="text-vogue-gold text-sm tracking-wide uppercase 
+                                                  hover:text-vogue-accent transition-colors">
+                                    Obtener Oferta →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Oferta 2 -->
+                    <article class="vogue-card vogue-shadow vogue-hover rounded-none p-10 group">
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-2 h-2 bg-vogue-gold rounded-full"></div>
+                                    <span class="vogue-subtitle text-xs text-vogue-gray tracking-wide">
+                                        SOLO SOCIOS SMART
+                                    </span>
+                                </div>
+                                <div class="bg-vogue-black text-vogue-white px-3 py-1 text-xs font-bold">
+                                    GRATIS
+                                </div>
+                            </div>
+                            
+                            <h3 class="vogue-title text-2xl lg:text-3xl text-vogue-black leading-tight 
+                                       group-hover:text-vogue-gold transition-colors duration-300">
+                                Webinars Premium Exclusivos
+                            </h3>
+                            
+                            <p class="vogue-body text-vogue-charcoal leading-relaxed">
+                                Te invitamos a nuestra serie de webinars avanzados sobre IA y Big Data. 
+                                Contenido de alto valor estratégico sin costo adicional para 
+                                miembros selectos.
+                            </p>
+                            
+                            <div class="pt-4">
+                                <a href="#" class="text-vogue-gold text-sm tracking-wide uppercase 
+                                                  hover:text-vogue-accent transition-colors">
+                                    Acceder Ahora →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Oferta 3 -->
+                    <article class="vogue-card vogue-shadow vogue-hover rounded-none p-10 group">
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-2 h-2 bg-vogue-gold rounded-full"></div>
+                                    <span class="vogue-subtitle text-xs text-vogue-gray tracking-wide">
+                                        CUPOS LIMITADOS
+                                    </span>
+                                </div>
+                                <div class="bg-vogue-accent text-vogue-white px-3 py-1 text-xs font-bold">
+                                    VIP
+                                </div>
+                            </div>
+                            
+                            <h3 class="vogue-title text-2xl lg:text-3xl text-vogue-black leading-tight 
+                                       group-hover:text-vogue-gold transition-colors duration-300">
+                                Consulta Estratégica Personalizada
+                            </h3>
+                            
+                            <p class="vogue-body text-vogue-charcoal leading-relaxed">
+                                Agenda una sesión de consultoría estratégica gratuita con nuestros 
+                                expertos senior para impulsar exponencialmente tu negocio hacia 
+                                el siguiente nivel.
+                            </p>
+                            
+                            <div class="pt-4">
+                                <a href="#" class="text-vogue-gold text-sm tracking-wide uppercase 
+                                                  hover:text-vogue-accent transition-colors">
+                                    Reservar Sesión →
+                                </a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- Sección de Eventos -->
-        <section id="eventos" class="mb-20">
-            <div class="flex items-center mb-8 border-b pb-4 border-elegant-border">
-                <!-- Icono de Eventos (SVG inline) -->
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-9 h-9 text-elegant-gold mr-4">
-                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 9a.75.75 0 00-1.5 0v2.25H9a.75.75 0 000 1.5h3.75a.75.75 0 00.75-.75V9z" clip-rule="evenodd" />
-                </svg>
-                <h2 class="font-playfair text-4xl font-normal text-elegant-dark">Próximos Eventos</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Evento 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-elegant-border flex items-start hover:shadow-lg transition duration-300">
-                    <div class="flex-shrink-0 bg-elegant-gold text-white rounded-full w-14 h-14 flex flex-col items-center justify-center text-center font-bold text-lg mr-6 font-playfair">
-                        JUN<br><span class="text-2xl mt-1">20</span>
-                    </div>
-                    <div>
-                        <h3 class="font-playfair text-2xl font-normal text-elegant-dark mb-2">Webinar: El Futuro de la IA en los Negocios</h3>
-                        <p class="font-lato text-elegant-text mb-2">20 de Junio, 10:00 AM (CEST)</p>
-                        <p class="font-lato text-elegant-gray">Únete a un panel de expertos para explorar cómo la inteligencia artificial está redefiniendo el panorama empresarial. ¡Imperdible!</p>
-                        <a href="#" class="font-lato text-elegant-dark hover:underline text-sm mt-3 inline-block">Más detalles y registro</a>
-                    </div>
+        <section class="editorial-spacing pb-26">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+                
+                <!-- Header de Sección -->
+                <div class="text-center mb-20">
+                    <p class="vogue-subtitle text-vogue-gray text-sm tracking-ultra-wide mb-6">
+                        AGENDA EJECUTIVA
+                    </p>
+                    <h2 class="vogue-title text-4xl md:text-5xl lg:text-6xl text-vogue-black mb-8">
+                        Próximos Eventos
+                    </h2>
+                    <div class="vogue-divider w-32 mx-auto"></div>
                 </div>
-                <!-- Evento 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md border border-elegant-border flex items-start hover:shadow-lg transition duration-300">
-                    <div class="flex-shrink-0 bg-elegant-gold text-white rounded-full w-14 h-14 flex flex-col items-center justify-center text-center font-bold text-lg mr-6 font-playfair">
-                        JUL<br><span class="text-2xl mt-1">05</span>
-                    </div>
-                    <div>
-                        <h3 class="font-playfair text-2xl font-normal text-elegant-dark mb-2">Encuentro de Socios Smart Plus 2025</h3>
-                        <p class="font-lato text-elegant-text mb-2">05 de Julio, 09:00 AM - 05:00 PM (CEST)</p>
-                        <p class="font-lato text-elegant-gray">Nuestro evento anual para conectar, intercambiar ideas y visionar el futuro de la innovación con los líderes del sector.</p>
-                        <a href="#" class="font-lato text-elegant-dark hover:underline text-sm mt-3 inline-block">Confirmar asistencia</a>
-                    </div>
+                
+                <!-- Grid de Eventos -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    
+                    <!-- Evento 1 -->
+                    <article class="vogue-card vogue-shadow vogue-hover rounded-none p-12 group">
+                        <div class="flex items-start space-x-8">
+                            <!-- Fecha Editorial -->
+                            <div class="flex-shrink-0 text-center">
+                                <div class="bg-vogue-gold text-vogue-white w-20 h-20 rounded-full 
+                                            flex flex-col items-center justify-center">
+                                    <span class="text-xs font-bold tracking-wide">JUN</span>
+                                    <span class="text-2xl font-light">20</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Contenido del Evento -->
+                            <div class="flex-1 space-y-6">
+                                <div class="space-y-2">
+                                    <h3 class="vogue-title text-2xl lg:text-3xl text-vogue-black leading-tight 
+                                               group-hover:text-vogue-gold transition-colors duration-300">
+                                        Webinar: El Futuro de la IA en los Negocios
+                                    </h3>
+                                    
+                                    <div class="flex items-center space-x-4 text-sm text-vogue-gray">
+                                        <span>20 de Junio</span>
+                                        <span>•</span>
+                                        <span>10:00 AM (CEST)</span>
+                                    </div>
+                                </div>
+                                
+                                <p class="vogue-body text-vogue-charcoal leading-relaxed">
+                                    Únete a un panel de expertos internacionales para explorar cómo 
+                                    la inteligencia artificial está redefiniendo completamente el 
+                                    panorama empresarial global. Una experiencia imperdible.
+                                </p>
+                                
+                                <div class="pt-4">
+                                    <a href="#" class="text-vogue-gold text-sm tracking-wide uppercase 
+                                                      hover:text-vogue-accent transition-colors">
+                                        Registrarse →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Evento 2 -->
+                    <article class="vogue-card vogue-shadow vogue-hover rounded-none p-12 group">
+                        <div class="flex items-start space-x-8">
+                            <!-- Fecha Editorial -->
+                            <div class="flex-shrink-0 text-center">
+                                <div class="bg-vogue-accent text-vogue-white w-20 h-20 rounded-full 
+                                            flex flex-col items-center justify-center">
+                                    <span class="text-xs font-bold tracking-wide">JUL</span>
+                                    <span class="text-2xl font-light">05</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Contenido del Evento -->
+                            <div class="flex-1 space-y-6">
+                                <div class="space-y-2">
+                                    <h3 class="vogue-title text-2xl lg:text-3xl text-vogue-black leading-tight 
+                                               group-hover:text-vogue-gold transition-colors duration-300">
+                                        Encuentro de Socios Smart Plus 2025
+                                    </h3>
+                                    
+                                    <div class="flex items-center space-x-4 text-sm text-vogue-gray">
+                                        <span>05 de Julio</span>
+                                        <span>•</span>
+                                        <span>09:00 AM - 05:00 PM (CEST)</span>
+                                    </div>
+                                </div>
+                                
+                                <p class="vogue-body text-vogue-charcoal leading-relaxed">
+                                    Nuestro evento anual más exclusivo para conectar, intercambiar 
+                                    ideas visionarias y co-crear el futuro de la innovación junto 
+                                    a los líderes más influyentes del sector tecnológico.
+                                </p>
+                                
+                                <div class="pt-4">
+                                    <a href="#" class="text-vogue-gold text-sm tracking-wide uppercase 
+                                                      hover:text-vogue-accent transition-colors">
+                                        Confirmar Asistencia →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
-
     </main>
-                                      <!-- Pie de Página -->
-    
-                                                           <p>&copy; 2025 Mi Espacio Smart Plus. Todos los derechos reservados. | Diseñado con <span class="text-red-500">❤️</span> y elegancia.</p>
-                                               <p class="mt-3 text-elegant-gray">Contacto: [adrian.sahagun.m@gmail.com] | Whatsapp: [+33613711829]</p>
-     </div>
-    </footer>
-</body><script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
-  <script src="https://files.bpcontent.cloud/2025/03/18/14/20250318141028-30WRMG85.js"></script>
 
+    <!-- Footer Editorial -->
+    <footer class="bg-vogue-black text-vogue-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 py-16">
+            <div class="text-center space-y-8">
+                <!-- Logo/Título -->
+                <h3 class="vogue-title text-3xl lg:text-4xl text-vogue-gold">
+                    Smart Plus
+                </h3>
+                
+                <!-- Divider -->
+                <div class="vogue-divider w-24 mx-auto bg-gradient-to-r from-transparent via-vogue-gold to-transparent"></div>
+                
+                <!-- Información de Contacto -->
+                <div class="space-y-4">
+                    <p class="vogue-body text-vogue-light-gray">
+                        © 2025 Mi Espacio Smart Plus. Todos los derechos reservados.
+                    </p>
+                    <p class="vogue-subtitle text-sm text-vogue-gray tracking-wide">
+                        DISEÑADO CON ELEGANCIA Y PRECISIÓN
+                    </p>
+                </div>
+                
+                <!-- Contacto -->
+                <div class="space-y-3 pt-6">
+                    <p class="text-sm text-vogue-light-gray">
+                        <span class="text-vogue-gold">Email:</span> adrian.sahagun.m@gmail.com
+                    </p>
+                    <p class="text-sm text-vogue-light-gray">
+                        <span class="text-vogue-gold">WhatsApp:</span> +33 613 711 829
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/03/18/14/20250318141028-30WRMG85.js"></script>
+</body>
 </html>
+
